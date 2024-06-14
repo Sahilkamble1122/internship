@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+:root {
+    --primary-color: #e82574;
+    --primary-color-dark: #bc1c5c;
+    --text-dark: #0c0a09;
+    --text-light: #78716c;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header1{
+    position: relative;
+    background-image: url("assets/ayodhya.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.logo1 {
+    max-width: 120px;
+    font-size: 1rem;
+}
+
+.nav_bar {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    align-items: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav_menu_btn {
+    display: none;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row; 
+    position: static;
+}
+
+.nav_links li {
+    list-style-type: none;
+    margin: 15px ;
+    padding-bottom: 10px;
+}
+
+.nav_links li a {
+    color: var(--white);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    height: 48px;
+    width: 138px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nav1{
+    position: fixed;
+    isolation: isolate;
+    top: 0;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    z-index: 20;
+    }
+    .nav_menu_btn {
+        display: flex;
+    }
+    .nav_bar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--primary-color);
+    }
+    .nav_links {
+        position: absolute;
+        top: 0;
+        padding: 2rem;
+        gap: 2rem;
+        align-items: center;
+        left: -100%;
+        width: 100%;
+        background-color: rgb(188, 28, 92, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: top 0.5s ease;
+        z-index: -1;
+    }
+   
+    .nav_links.active {
+        left: 10;
+    }
+
+    .nav_links li {
+        margin: 20px 0;
+    }
+
+    .nav_btn {
+        display: none;
+    }
+}
+
+
